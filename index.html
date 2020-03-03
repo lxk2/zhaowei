@@ -20,10 +20,6 @@
       display: flex;
       justify-content: center;
     }
-    .halftone {
-      position: relative;
-      z-index: -1;
-    }
   </style>
 </head>
 
@@ -78,6 +74,18 @@
   <script src="js/breathing-halftone.pkgd.js"></script>
   
   <script src="js/scripts.js"></script>
+  <script>
+    $(function () { 
+      setTimeout(function() {
+        $('.halftone').each(function () {
+          $(this).css({
+            position: 'relative',
+            zIndex: -1
+          })
+        })
+      }, 200);
+    }())
+  </script>
 </body>
 
 </html>
